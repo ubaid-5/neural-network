@@ -1,0 +1,43 @@
+{
+  "architecture": "260-24-4",
+  "input_features": 260,
+  "temporal_bins": 20,
+  "trainable_parameters": 6364,
+  "macs_per_recording": 6336,
+  "best_epoch": 40,
+  "validation_accuracy": 0.8110647181628392,
+  "test_accuracy": 0.7992277992277992,
+  "test_loss": 0.5687261819839478,
+  "confusion_matrix": [
+    [
+      238,
+      15,
+      8,
+      1
+    ],
+    [
+      10,
+      184,
+      14,
+      46
+    ],
+    [
+      9,
+      22,
+      209,
+      26
+    ],
+    [
+      9,
+      28,
+      20,
+      197
+    ]
+  ],
+  "class_names": [
+    "yes",
+    "no",
+    "up",
+    "down"
+  ]
+}
