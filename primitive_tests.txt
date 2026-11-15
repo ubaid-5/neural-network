@@ -1,0 +1,29 @@
+﻿fixed-point format Q6.10, seed 7
+
+check                                            cases    pass   fail
+requantise (round + saturate)                     5017    5017      0
+VMM tiled, 2 lanes (directed)                        8       8      0
+VMMT tiled, 2 lanes (directed)                       8       8      0
+VMM tiled, 2 lanes (random)                        200     200      0
+VMMT tiled, 2 lanes (random)                       200     200      0
+VMM tiled, 4 lanes (directed)                        8       8      0
+VMMT tiled, 4 lanes (directed)                       8       8      0
+VMM tiled, 4 lanes (random)                        200     200      0
+VMMT tiled, 4 lanes (random)                       200     200      0
+VMM tiled, 8 lanes (directed)                        8       8      0
+VMMT tiled, 8 lanes (directed)                       8       8      0
+VMM tiled, 8 lanes (random)                        200     200      0
+VMMT tiled, 8 lanes (random)                       200     200      0
+fast path == tiled path (2/4/8 lanes)              200     200      0
+outer product                                      200     200      0
+element-wise mul                                   201     201      0
+element-wise add                                   201     201      0
+element-wise sub                                   201     201      0
+ReLU                                               200     200      0
+STEP                                               200     200      0
+VMM error vs float64 within bound                  200     200      0
+
+TOTAL 7868 cases, 7868 passed, 0 failed
+largest float error / bound: 0.64 (must stay below 1.00)
+worst-case safe dot-product length with a 40-bit accumulator: 511 elements (your layers: 260 and 24)
+ALL PASS
